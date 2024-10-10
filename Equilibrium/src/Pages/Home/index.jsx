@@ -1,5 +1,5 @@
 import imgHome from '../../assets/mindfulness-animate.svg'
-import './home.modules.css'
+import './Home.modules.css'
 function Home({ user }) {
     
     return (
