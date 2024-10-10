@@ -7,15 +7,21 @@ const login = () => {
 
         const [username, setUsername] = useState("");
         const [password, setPassword] = useState("");
+
+        const handleSubmit = (event) => {
+            event.preventDefault()
+
+            alert("Dados enviados:" + username + " - " + password)
+        };
   return (
     <div className="container">
-        <form>
+        <form onSubmit={handleSubmit}>
             <h1>Faça seu login</h1>
             <div>
-               <input type="email" placeholder="E-mail"/>
+               <input type="email" placeholder="E-mail" onChange={(e) => setUsername(e.target.value)}/>
             </div>
             <div>
-                <input type="password" placeholder='Senha' />
+                <input type="password" placeholder="Senha" onChange={(e) => setPassword(e.target.value)} />
             </div>
 
             <div className="recall-forget">
