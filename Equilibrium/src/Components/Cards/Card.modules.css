@@ -1,0 +1,83 @@
+.card {
+  width: 300px;
+  height: auto;
+  background-color: var(--soft-white);
+  color: var(--gray);
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #22222270;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: var(--black);
+}
+
+.price {
+  font-size: 1.2rem;
+  color: var(--white);
+  background-color: #7b68ee;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-align: center;
+  display: inline-block;
+  width: auto;
+  user-select: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+.price:hover {
+  background-color: var(--cinza);
+}
+
+.card_footer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.card_icones {
+  display: flex;
+  gap: 10px;
+  color: var(--gold);
+  font-size: 1.5rem;
+}
+
+.botao {
+  width: 40px;
+  height: 40px;
+
+  border: 0;
+  border-radius: 8px;
+  background-color: var(--primary);
+  color: var(--white);
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.botao:hover {
+  background-color: var(--red);
+  transition: all 0.5s;
+}
+
+@media (max-width: 768px) {
+  .card h3 {
+    color: var(--primary);
+    margin-bottom: 10px;
+  }
+}
