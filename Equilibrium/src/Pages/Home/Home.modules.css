@@ -1,0 +1,26 @@
+.section-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 80%;
+    margin: auto;
+    height: 100vh;
+    color: #494848;
+}
+
+.img-principal {
+    width: 700px;
+  }
+  
+
+.left {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+
+}
+
+.left h1 span{
+    color: #FFDC73;
+}
