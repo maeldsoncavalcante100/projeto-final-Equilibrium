@@ -7,7 +7,7 @@ function Header(){
                 <li>Início</li>
                 <li>Sobre</li>
                 <li>Livros</li>
-                <li></li>
+                <li>Comentários</li>
             </ul>
         </header>
     );
