@@ -1,8 +1,8 @@
 .card {
   width: 300px;
   height: auto;
-  background-color: var(--soft-white);
-  color: var(--gray);
+  background-color: #f1f1f1;
+  color: #222222;
   font-weight: bold;
   border-radius: 10px;
   box-shadow: 5px 5px 10px #22222270;
@@ -14,17 +14,20 @@
 }
 
 .card h3 {
-  color: var(--primary);
+  color: #16213E;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card p {
-  color: var(--black);
+  color: #111111;
 }
 
 .price {
   font-size: 1.2rem;
-  color: var(--white);
+  color: #fefefe;
   background-color: #7b68ee;
   font-weight: bold;
   padding: 10px 15px;
@@ -38,7 +41,7 @@
 }
 
 .price:hover {
-  background-color: var(--cinza);
+  background-color: #808080;
 }
 
 .card_footer {
@@ -51,7 +54,7 @@
 .card_icones {
   display: flex;
   gap: 10px;
-  color: var(--gold);
+  color: #FFD700;
   font-size: 1.5rem;
 }
 
@@ -61,17 +64,18 @@
 
   border: 0;
   border-radius: 8px;
-  background-color: var(--primary);
-  color: var(--white);
+  background-color: #16213E;
+  color: #fefefe;
   font-size: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  padding: 10px;
 }
 
 .botao:hover {
-  background-color: var(--red);
+  background-color: #E94560;
   transition: all 0.5s;
 }
 

@@ -1,7 +1,7 @@
 
 import { useState } from "react";
 import Card from "../../components/Cards";
-import styles from "./Indicacoes.modules.css";
+import styles from "./Indicacoes.module.css";
 import { useLivros } from "./Hooks/useLivros.js"
 
 function Indicacoes() {

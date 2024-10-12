@@ -1,5 +1,5 @@
-import styles from "./Card.modules.css";
-import { BsArrowRight, BsPencil, BsTrash } from "react-icons/bs";
+import styles from "./Card.module.css";
+import { BsArrowRight, BsPencilFill, BsTrash2Fill } from "react-icons/bs";
 import { IoStar } from "react-icons/io5";
 import { Link } from "react-router-dom";
 
@@ -32,14 +32,14 @@ function Card({ _id, name, description, price, link, onEdit, onDelete }) {
           className={styles.botao}
           aria-label="Editar Livro"
         >
-          <BsPencil />
+          <BsPencilFill />
         </button>
         <button
           onClick={() => onDelete(_id)}
           className={styles.botao}
           aria-label="Excluir Livro"
         >
-          <BsTrash />
+          <BsTrash2Fill /> 
         </button>
       </div>
     </section>

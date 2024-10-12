@@ -1,15 +1,14 @@
-import Home from './Pages/Home/index'
-import Header from './components/header/index'
-import './App.css'
+
+
+import "./App.css";
+import AppRoutes from "./routes";
 
 function App() {
-  const user = 'Thiago '
   return (
     <>
-      <Header />
-      <Home user={user} />
+      <AppRoutes />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
