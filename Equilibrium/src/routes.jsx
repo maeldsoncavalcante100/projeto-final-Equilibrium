@@ -3,7 +3,7 @@ import PageBase from "./Pages/PageBase";
 import Home from "./Pages/Home";
 import Sobre from './Pages/Sobre'
 import Indicacoes from './Pages/Indicacoes'
-import Login from './Pages/Login/login'
+import Comentarios from './Pages/Comentarios'
 
 function AppRoutes() {
   return (
@@ -13,7 +13,7 @@ function AppRoutes() {
           <Route index element={<Home />}></Route>
           <Route path="/sobre" element={<Sobre />}></Route>
           <Route path="/indicacoes" element={<Indicacoes />}></Route>
-          <Route path="/login" element={<Login />}></Route>
+          <Route path="/comentarios" element={<Comentarios />}></Route>
         </Route>
       </Routes>
     </BrowserRouter>

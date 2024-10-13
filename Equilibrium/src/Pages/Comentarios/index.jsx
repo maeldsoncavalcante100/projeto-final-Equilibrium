@@ -1,81 +1,106 @@
-index.jsx
+/* eslint-disable no-unused-vars */
 
-// src/components/CommentsSection.jsx
-import React, { useState, useEffect } from 'react';
-import { getComments, addComment, updateComment, deleteComment } from '../services/commentsService';
-import Comment from '../../components/Comentarios/comment';
+import React, { useState, useEffect } from "react";
 
-const CommentsSection = () => {
-    const [comments, setComments] = useState([]);
-    const [newComment, setNewComment] = useState('');
+import styles from "./Comentarios.module.css";
 
-    useEffect(() => {
-        loadComments();
-    }, []);
+const Comentarios = () => {
+  const [comments, setComments] = useState([]);
+  const [newComment, setNewComment] = useState("");
+  const [editingCommentId, setEditingCommentId] = useState(null);
+  const [editingCommentText, setEditingCommentText] = useState("");
 
-    const loadComments = async () => {
-        try {
-            const data = await getComments();
-            setComments(data);
-        } catch (error) {
-            console.error("Erro ao buscar comentários:", error);
-        }
+  useEffect(() => {
+    const storedComments = JSON.parse(localStorage.getItem("comments"));
+    if (storedComments) {
+      setComments(storedComments);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem("comments", JSON.stringify(comments));
+  }, [comments]);
+
+  const handleAddComment = () => {
+    if (newComment.trim() === "") return;
+
+    const newCommentObj = {
+      id: Date.now(),
+      text: newComment,
     };
 
-    const handleAddComment = async () => {
-        try {
-            const addedComment = await addComment(newComment);
-            setComments([...comments, addedComment]);
-            setNewComment('');
-        } catch (error) {
-            console.error("Erro ao adicionar comentário:", error);
-        }
-    };
+    setComments([...comments, newCommentObj]);
+    setNewComment("");
+  };
 
-    const handleDeleteComment = async (id) => {
-        try {
-            await deleteComment(id);
-            setComments(comments.filter(comment => comment.id !== id));
-        } catch (error) {
-            console.error("Erro ao deletar comentário:", error);
-        }
-    };
+  const handleDeleteComment = (id) => {
+    setComments(comments.filter((comment) => comment.id !== id));
+  };
 
-    const handleEditComment = async (id, updatedText) => {
-        try {
-            const updatedComment = await updateComment(id, updatedText);
-            setComments(comments.map(comment =>
-                comment.id === id ? updatedComment : comment
-            ));
-        } catch (error) {
-            console.error("Erro ao editar comentário:", error);
-        }
-    };
-    return (
-        <div>
-            <h2>Comentários</h2>
-            <ul>
-                {comments.map(comment => (
-                    <Comment
-                        key={comment.id}
-                        comment={comment}
-                        onDelete={handleDeleteComment}
-                        onEdit={handleEditComment}
-                    />
-                ))}
-            </ul>
+  const handleEditComment = (id, text) => {
+    setEditingCommentId(id);
+    setEditingCommentText(text);
+  };
 
-            <div>
-                <input
-                    type="text"
-                    value={newComment}
-                    onChange={(e) => setNewComment(e.target.value)}
-                    placeholder="Escreva um comentário..."
-                />
-                <button onClick={handleAddComment}>Comentar</button>
-            </div>
-        </div>
+  const handleSaveEdit = () => {
+    setComments(
+      comments.map((comment) =>
+        comment.id === editingCommentId
+          ? { ...comment, text: editingCommentText }
+          : comment
+      )
     );
+    setEditingCommentId(null);
+    setEditingCommentText("");
+  };
+
+  return (
+    <div className={styles.comentariosContainer}>
+      <h2 className={styles.title}>Comentários</h2>
+      <div className={styles.inputContainer}>
+        <input
+          type="text"
+          value={newComment}
+          onChange={(e) => setNewComment(e.target.value)}
+          placeholder="Digite seu comentário"
+        />
+        <button onClick={handleAddComment}>Comentar</button>
+      </div>
+
+      <div>
+        {comments.map((comment) => (
+          <div className={styles.comment} key={comment.id}>
+            {editingCommentId === comment.id ? (
+              <>
+                <input
+                  className={styles.editInput}
+                  type="text"
+                  value={editingCommentText}
+                  onChange={(e) => setEditingCommentText(e.target.value)}
+                />
+                <button onClick={handleSaveEdit}>Salvar</button>
+                <button onClick={() => setEditingCommentId(null)}>
+                  Cancelar
+                </button>
+              </>
+            ) : (
+              <>
+                <p>{comment.text}</p>
+                <button
+                  onClick={() => handleEditComment(comment.id, comment.text)}
+                >
+                  Editar
+                </button>
+                <button onClick={() => handleDeleteComment(comment.id)}>
+                  Deletar
+                </button>
+              </>
+            )}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 };
 
-export default CommentsSection;
+export default Comentarios;

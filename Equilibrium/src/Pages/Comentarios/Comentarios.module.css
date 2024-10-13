@@ -1,0 +1,85 @@
+.comentariosContainer {
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: #0000001a 0px 4px 10px 0px;
+  color: #ffffffde;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  line-height: 24px;
+  margin: 300px;
+  margin-top: 0px;
+  padding: 32px;
+}
+
+.title {
+  text-align: center;
+  color: #333;
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.inputContainer input {
+  flex-grow: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.inputContainer button {
+  padding: 10px 15px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.inputContainer button:hover {
+  background-color: #45a049;
+}
+
+.comment {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 15px;
+  margin-top: 10px;
+  background-color: #fff;
+}
+
+.comment p {
+  margin: 0 0 10px;
+  color: #555;
+}
+
+.comment button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.comment button:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.editInput {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: calc(100% - 22px);
+}
