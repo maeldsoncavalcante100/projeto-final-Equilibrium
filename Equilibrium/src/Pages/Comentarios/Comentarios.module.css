@@ -83,3 +83,43 @@
   border-radius: 5px;
   width: calc(100% - 22px);
 }
+
+
+@media (max-width: 480px) {
+  .comentariosContainer {
+    margin: 20px; 
+    padding: 15px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .inputContainer {
+    flex-direction: column; 
+    gap: 5px;
+  }
+
+  .inputContainer input {
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .inputContainer button {
+    width: 100%; 
+  }
+
+  .comment {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .comment button {
+    width: 100%; 
+    margin-top: 5px;
+  }
+
+  .editInput {
+    width: 100%; 
+  }
+}
