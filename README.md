@@ -18,11 +18,12 @@ Mais Saúde é uma plataforma dedicada a fornecer informações e recomendaçõe
 
 ## Imagens do projeto:
 
-| ![Image 1](./imagens-site/Macbook-Air-maissaude-alpha.vercel.app.png) | ![Image 2](./imagens-site/Xiaomi-Mi-11i-maissaude-alpha.vercel.app.png) |
+| ![Image 1](./imagens-site/Macbook-Air-projeto-final-equilibrium.vercel.app.png) | ![Image 2](./imagens-site/iPhone-13-PRO-projeto-final-equilibrium.vercel.app.png) |
 | --------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 
 ## 🛠️ Construído com as Tecnologias:
 
+- JavaScript
 - React
 - Vite
 - Node.js
