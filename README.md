@@ -1,6 +1,6 @@
 # Equilibrium
 
-Mais Saúde é uma plataforma dedicada a fornecer informações e recomendações sobre saúde mental e bem-estar. Nosso objetivo é ajudar os usuários com sugestões de leitura
+Equilibrium é uma plataforma dedicada a fornecer informações e recomendações sobre saúde mental e bem-estar. Nosso objetivo é ajudar os usuários com sugestões de leitura e comentários positivos.
 
 ## Sumário:
 
@@ -70,7 +70,7 @@ https://projeto-final-equilibrium.vercel.app/
 ## Apresentação Linkedin:
 
 ```
-
+https://www.linkedin.com/posts/maeldsoncavalcante_apresenta%C3%A7%C3%A3o-activity-7251645650260426752-VZ31?utm_source=share&utm_medium=member_desktop
 ```
 
 ## Contribuição:
